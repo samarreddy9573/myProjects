@@ -35,7 +35,7 @@ public class BikeController {
     @DeleteMapping("/delete/{id}")
     public Mono<ResponseEntity<String>> delById(@PathVariable Long id) {
         return bikeService.delById(id)
-                .then(Mono.just(ResponseEntity.ok("Bike with ID " + id + " has been deleted successfully.")));
+                .then(Mono.just(ResponseEntity.ok("Bike with ID " + id + " Have been deleted successfully.")));
     }
     @GetMapping("/get/{id}")
     public Mono<BikeEntity> findById(@PathVariable Long id){
